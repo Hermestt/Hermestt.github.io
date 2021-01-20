@@ -1,0 +1,143 @@
+/* DOCUMENT INFORMATION
+	- Document: Portfolio Theme
+	- Version:  0.0.1
+	- Author:   Pedro d'Oliveira
+*/
+
+/* CSS DIRECTORY
+	1. =GLOBAL
+    2. =PRIMARY
+    3. =NAV
+    4. =HEADER
+    5. =PROJECTS
+    6. =SKILLS
+	7. =FOOTER
+*/
+
+/* COLORS
+    - default body text  #212121
+    - primary color: #1034A6 (blue)
+    - contrast color: #FFDD00 (yellow)
+*/
+
+/* FONTS
+	- default body Montserrat, Arial, sans-serif
+	- headings   Montserrat, Arial, sans-serif
+*/
+
+/* ===GLOBAL=== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap');
+
+*{
+    border: 1px dashed pink;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+/* Links */
+a:link {
+    color: #0080FF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0080FF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0080FF;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #0080FF;
+    text-decoration: underline;
+}
+
+h1{
+    font-size: 52px;
+    color: #1034A6;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+/* ===NAV=== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+}
+
+nav ul{padding: 0;}
+
+nav li{
+    display: inline;
+    list-style-type: none;
+    margin-right: 16px;
+}
+
+nav li:last-child{
+    margin: 0;
+}
+
+nav a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.box-pad{
+    padding: 0 150px;
+}
+
+
+/* ===HEADER=== */
+header {
+    height: 80vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1{
+    margin-top: -100px;
+    margin-bottom: 1rem;
+}
+
+#position, #location {
+    color: #1034A6;
+}
+
+#location {
+    margin-top: 3rem;
+    opacity: .7;
+}
+
+header .img-container{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    right: 10%;
+    top: 100px;
+}
+
+header .img-container > span{
+    display: inline-block;
+    background: rgb(16,52,166);
+    background: linear-gradient(336deg, rgba(16,52,166,1) 0%, rgba(0,212,255,1) 100%); 
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+header .img-container img{
+    width: 100%;
+    z-index: 1;
+}
+
+/* ===PROJECTS=== */
