@@ -11,7 +11,8 @@
     4. =HEADER
     5. =PROJECTS
     6. =SKILLS
-	7. =FOOTER
+    7. =FOOTER
+    8. =MEDIA QUERIES
 */
 
 /* COLORS
@@ -25,11 +26,12 @@
 	- headings   Montserrat, Arial, sans-serif
 */
 
+
+
 /* ===GLOBAL=== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap');
 
 *{
-    /*border: 1px dashed pink;*/
     font-family: Montserrat, Arial, sans-serif;
 }
 
@@ -37,10 +39,13 @@ body{
     background-color: #FBFBFB;
 }
 
+/* Lists */
+
 ul{
     margin: 0;
     padding: 0;
 }
+
 li{list-style-type: none;}
 
 /* Links */
@@ -172,15 +177,21 @@ header .img-container img{
 }
 
 /* ===PROJECTS=== */
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+}
+
+
 article{
     display: flex;
-    width: 320px;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .project-card{
     display: inline-block;
-    margin-right: 40px;
     background-color: #F1F1F1;
     border-radius: 8px;
     border: 1px solid lightgrey;
@@ -271,7 +282,7 @@ footer li{
 }
 
 
-/* ===RESPONSIVENESS=== */
+/* ===MEDIA QUERIES=== */
 
 @media (max-width: 600px)
 {
@@ -317,6 +328,10 @@ footer li{
     header .img-container > span{
         width: 200px;
         height: 200px;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr;
     }
 
     .project-card{
