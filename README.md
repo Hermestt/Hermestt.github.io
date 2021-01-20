@@ -2,7 +2,7 @@
 
 
 
-##Requisitos & Informação
+## Requisitos & Informação
 
 ### Informação
 
@@ -90,10 +90,10 @@ Terminados a 20/1
 
 
 
-#### Melhorias
+#### Melhorias a fazer
 
-- [ ] usar a tag <figure> dentro do <article>  (HTML)
-- [ ] usar grid system nos projects (CSS)
+- [ ] usar a tag "figure" dentro do "article"  (HTML)
+- [x] usar grid system nos projects (CSS)
 - [ ] adicionar margens de umas secções para outras (CSS)
 - [ ] melhorar o código de interactividade (JS)
 - [ ] melhorar a randomness das imagens, de modo a que a cada clique seja escolhida uma imagem diferente da anterior. (JS)
