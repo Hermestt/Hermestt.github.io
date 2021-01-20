@@ -70,6 +70,7 @@ a.button{
     border-radius: 100px;
     color: rgb(0,0,0,.8);
     font-weight: 700;
+    display: inline-block;
 }
 
 h1{
@@ -117,12 +118,11 @@ header {
     height: 80vh;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 100px;
 }
 
 header h1{
-    margin-top: -100px;
+    margin-top: 200px;
     margin-bottom: 1rem;
 }
 
@@ -139,32 +139,36 @@ header h1{
     opacity: .7;
 }
 
+
 header .img-container{
-    height: 400px;
-    width: 400px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    right: 10%;
-    top: 100px;
+        position: relative;
+        height: 400px;
+        width: 400px;
 }
+
 
 header .img-container > span{
     display: inline-block;
     background: rgb(16,52,166);
     background: linear-gradient(336deg, rgba(16,52,166,1) 0%, rgba(0,212,255,1) 100%); 
-    width: 80%;
-    height: 80%;
-    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     position: absolute;
     z-index: 0;
+    bottom: 0;
+    right: 0;
 }
 
 header .img-container img{
-    max-width: 100%;
-    z-index: 1;
-    max-height: 100%;
+        width: auto;
+        z-index: 1;
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-height: 400px;
+        max-width: 100%;
 }
 
 /* ===PROJECTS=== */
@@ -224,7 +228,7 @@ article{
     margin-top: 100px;
 }
 #email, #social-media{
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
 }
 
@@ -244,8 +248,8 @@ article{
 /* ===FOOTER=== */
 
 footer{
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 footer .container {
     display: flex;
@@ -264,4 +268,83 @@ footer a{
 footer li{
     margin-bottom: 4px;
     font-size: 14px;
+}
+
+
+/* ===RESPONSIVENESS=== */
+
+@media (max-width: 600px)
+{
+   #position{
+       font-size: 24px;
+   }
+
+   h2{text-align: center;}
+   .box-pad{
+       padding-right: 24px;
+       padding-left: 24px;
+    }
+
+    nav{display: none;}
+
+    header{
+        text-align: center;
+        flex-direction: column-reverse;
+        height: auto;
+        padding-top: 56px;
+    }
+
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    header h1{
+        margin-top: 56px;
+    }
+
+    #location{margin-top: 1rem;}
+
+    header .img-container{
+        height: 260px;
+        width: 260px;
+        align-self: center;
+    }
+
+    header .img-container img{
+        max-height: 260px;
+    }
+    
+    header .img-container > span{
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-card{
+        margin-right: 0;
+        width: auto;
+    }
+
+    #contact{
+        text-align: center;
+    }
+    #social-media, #email{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #social-media a{
+        margin-bottom: 24px;
+    }
+
+    #social-media a:last-child{
+        margin-bottom: 0;
+    }
+
+    footer div{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer div li{
+        margin: 16px 0;
+    }
 }
