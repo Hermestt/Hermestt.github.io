@@ -15,13 +15,10 @@ function getImg() {
     getImg.last = random;
 
     let el = document.getElementById('animal-img');
-    console.log("childEl: "+el);
-    //let num = Math.floor(Math.random() * 3);
-    console.log("num: "+getImg.last);
     el.src=`img/animals/${getImg.last}.png`;
 };
 
 let el = document.getElementById('animal');
 el.addEventListener('click', getImg, false);
 
-getImg()
+getImg();
