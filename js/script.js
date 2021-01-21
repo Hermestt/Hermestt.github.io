@@ -20,5 +20,3 @@ function getImg() {
 
 let el = document.getElementById('animal');
 el.addEventListener('click', getImg, false);
-
-getImg();
