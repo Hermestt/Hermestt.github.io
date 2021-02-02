@@ -14,9 +14,29 @@ function getImg() {
     } while (random === getImg.last);
     getImg.last = random;
 
-    let el = document.getElementById('animal-img');
+    let el = document.querySelector('#animal-img');
     el.src=`img/animals/${getImg.last}.png`;
+
+    clearInterval(interval);
 };
 
-let el = document.getElementById('animal');
+let el = document.querySelector('#animal');
 el.addEventListener('click', getImg, false);
+
+
+/**
+ * Atribuir a animação ao curso num certo intervalo de tempo até o user ativar a função getIMG()
+ */
+let we = document.querySelector('#cursor');
+
+function addTransform(){
+    we.classList.contains('animation-cursor') ? we.classList.remove('animation-cursor') : we.classList.add('animation-cursor');
+    /*
+    if (we.classList.contains('animation-cursor')){
+        we.classList.remove('animation-cursor');
+    } else {
+        we.classList.add('animation-cursor');
+    } */   
+}
+
+let interval = setInterval(addTransform, 2000);

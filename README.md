@@ -7,7 +7,7 @@
 ### Informação
 
 - Nome & Avatar de UM animal aleatório*
-- título UI Designer & Front-End Developer
+- Front-End Developer
 - Localização (Cidade/país)
 - Skills list (Adobe XD, Sketch, JS, HTML, CSS, REACT,GIT, GIT HUB)
 - Projects
@@ -66,3 +66,6 @@
 ├── contact.html
 └── README.md
 ```
+
+## JS Methods and Functions Used
+setInterval(), clearInterval()
