@@ -17,7 +17,7 @@ function getImg() {
     let el = document.querySelector('#animal-img');
     el.src=`img/animals/${getImg.last}.png`;
 
-    clearInterval(interval);
+    clearInterval(interval); //Elimina o intervalo de repetição porque presumívelmente o utilizador já clicou nos animais.
 };
 
 let el = document.querySelector('#animal');
@@ -31,12 +31,6 @@ let we = document.querySelector('#cursor');
 
 function addTransform(){
     we.classList.contains('animation-cursor') ? we.classList.remove('animation-cursor') : we.classList.add('animation-cursor');
-    /*
-    if (we.classList.contains('animation-cursor')){
-        we.classList.remove('animation-cursor');
-    } else {
-        we.classList.add('animation-cursor');
-    } */   
 }
 
 let interval = setInterval(addTransform, 2000);
