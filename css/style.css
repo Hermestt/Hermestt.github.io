@@ -366,8 +366,27 @@ footer li{
 
 
 /* ===MEDIA QUERIES=== */
+@media (max-width: 1024px) {
+    .box-pad{
+        padding-right: 80px;
+        padding-left: 80px;
+    }
 
-@media only screen and (max-device-width: 720px) and (orientation:portrait){ 
+    #projects {
+        margin-top: 80px;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card{
+        margin-right: 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 720px) { 
    #position{
        font-size: 24px;
    }
@@ -451,22 +470,3 @@ footer li{
     }
 }
 
-@media only screen and (min-device-width: 720px) and (max-device-width: 1025px) {
-    .box-pad{
-        padding-right: 80px;
-        padding-left: 80px;
-    }
-
-    #projects {
-        margin-top: 80px;
-    }
-
-    .grid-container{
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .project-card{
-        margin-right: 0;
-        width: auto;
-    }
-}
