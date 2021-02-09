@@ -1,0 +1,87 @@
+/* DOCUMENT INFORMATION
+	- Document: Portfolio Components
+	- Version:  0.0.1
+	- Author:   Pedro d'Oliveira
+*/
+
+/* CSS DIRECTORY
+	1. =Warning Messages
+    2. =Text Containers
+*/
+
+/* ===WARNING MESSAGES=== */
+
+/*  bar at fixed position on top of the website */
+#warning-msg{
+    background-color: #FF2800;
+    padding: 4px 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: rbga(0,0,0,.8);
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/* ===TEXT CONTAINERS=== */
+.text-container{
+    max-width: 580px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.text-container p{
+    line-height: 1.6rem;
+}
+
+
+
+/* ===PROJECT CARD=== */
+.grid-container > a{
+    display: block;
+}
+.project-card{
+    width: 100%;
+    display: inline-block;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.2);
+    box-sizing: border-box;
+    margin-bottom: 32px;
+}
+
+.project-card:last-child{
+    margin-right: 0;
+}
+
+.project-card .img-container{
+    width: auto;
+    padding-top: 56.25%;
+    background: lightskyblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card h5{
+    line-height: 2rem;
+}
+.project-details{
+    padding: 8px 16px;
+    color:rgba(0,0,0,.9);
+}
+
+.tech-used {
+    margin-top: 16px;
+}
+.tech-used li{
+    display: inline;
+    margin-right: 8px;
+}
+
+.tech-used li img {
+    height: 24px;
+    width: 24px;
+}
