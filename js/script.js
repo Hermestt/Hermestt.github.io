@@ -6,7 +6,7 @@
 */
 function getImg() {
     let min = 0,
-        max = 5,
+        max = 4,
         random;
 
     do {
@@ -14,23 +14,23 @@ function getImg() {
     } while (random === getImg.last);
     getImg.last = random;
 
-    let el = document.querySelector('#animal-img');
-    el.src=`img/animals/${getImg.last}.png`;
+    let imgElement = document.querySelector('#animal-img');
+    imgElement.src=`img/animals/${getImg.last}.png`;
 
     clearInterval(interval); //Elimina o intervalo de repetição porque presumívelmente o utilizador já clicou nos animais.
 };
 
-let el = document.querySelector('#animal');
-el.addEventListener('click', getImg, false);
+let animalContainer = document.querySelector('#animal');
+animalContainer.addEventListener('click', getImg, false);
 
 
 /**
  * Atribuir a animação ao curso num certo intervalo de tempo até o user ativar a função getIMG()
  */
-let we = document.querySelector('#cursor');
+let cursor = document.querySelector('#cursor');
 
 function addTransform(){
-    we.classList.contains('animation-cursor') ? we.classList.remove('animation-cursor') : we.classList.add('animation-cursor');
+    cursor.classList.contains('animation-cursor') ? cursor.classList.remove('animation-cursor') : cursor.classList.add('animation-cursor');
 }
 
 let interval = setInterval(addTransform, 2000);

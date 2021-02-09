@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Pedro d'Oliveira Portfolio</title>
 </head>
 <body>
-
     <!-- Top Navigation -->
     <nav class="box-pad">
-        <img src="" alt="icon container">
+        <a href="index.html">PEDRO D'OLIVEIRA</a>
         <ul>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#skills">Contacts</a></li>
+            <li><a href="#contacts">Contacts</a></li>
         </ul>
     </nav>
 
@@ -29,7 +29,7 @@
         </div>
         <div class="container">
             <h1>Pedro d'Oliveira</h1>
-            <span id="position">Frond-End Developer</span>
+            <span id="position">UI Designer</span>
             <span id="location">Coimbra 🇵🇹</span>
         </div>
     </header>
@@ -38,102 +38,84 @@
     <section id="projects" class="box-pad">
         <h2>Projects</h2>
         <div class="grid-container">
-            <article class="project-card">
-                <div class="img-container">
-                    <img src="" alt="">
-                </div>  
-                <div class="project-details">
-                    <h5>Project Name <a href="">LINK</a></h5>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-                    <ul class="tech-used">
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                    </ul>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="img-container">
-                    <img src="" alt="">
-                </div>  
-                <div class="project-details">
-                    <h5>Project Name <a href="">LINK</a></h5>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-                    <ul class="tech-used">
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                    </ul>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="img-container">
-                    <img src="" alt="">
-                </div>  
-                <div class="project-details">
-                    <h5>Project Name <a href="">LINK</a></h5>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-                    <ul class="tech-used">
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                    </ul>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="img-container">
-                    <img src="" alt="">
-                </div>  
-                <div class="project-details">
-                    <h5>Project Name <a href="">LINK</a></h5>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-                    <ul class="tech-used">
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                        <li><img src="img/icons/js.png" alt=""></li>
-                    </ul>
-                </div>
-            </article>
-        </div>
+            <a href="projects/lms/lms.html">
+                <article class="project-card">
+                    <div class="img-container" style="background-image: url(../projects/lms/header.jpg)"></div>  
+                    <div class="project-details">
+                        <h5>LMS</h5>
+                        <p class="project-description">Learning Management System Platform</p>
+                        <ul class="tech-used">
+                            <li><img src="img/icons/sketch.svg" alt="Sketch"></li>
+                            <li><img src="img/icons/zeplin.svg" alt="Zeplin"></li>
+                            <li><img src="img/icons/css.svg" alt="CSS"></li>
+                            <li><img src="img/icons/html.svg" alt="HTML"></li>
+                            <li><img src="img/icons/js.svg" alt="JavaScript"></li>
+                            <li><img src="img/icons/teams.svg" alt="Teams"></li>                            
+                            <li><img src="img/icons/gitlab.svg" alt="GitLab"></li>
+                            <li><img src="img/icons/github.svg" alt="GitHub"></li>
+                        </ul>
+                    </div>
+                </article>
+            </a>
+
+            <a href="projects/talents/talents.html">
+                <article class="project-card">
+                    <div class="img-container" style="background-image: url(https://talentsatwork.at/pix/landing_page_marketing_1.svg)"></div>  
+                    <div class="project-details">
+                        <h5>Talents at Work</h5>
+                        <p class="project-description">Recruitment Platform</p>
+                        <ul class="tech-used">
+                            <li><img src="img/icons/sketch.svg" alt="Sketch"></li>
+                            <li><img src="img/icons/zeplin.svg" alt="Zeplin"></li>
+                            <li><img src="img/icons/github.svg" alt="GitHub"></li>
+                        </ul>
+                    </div>
+                </article>
+            </a>
+
+            <a href="projects/cuvid/cuvid.html">
+                <article class="project-card">
+                    <div class="img-container" style="background-image: url(https://www.bitschulungscenter.at/wp-content/uploads/2020/04/Bit-banner-eu-projekte_1080x450px_cuvid.jpg)"></div>  
+                    <div class="project-details">
+                        <h5>CUVID - Curriculum Video</h5>
+                        <p class="project-description">Recruitment Platform (European Project)</p>
+                        <ul class="tech-used">
+                            <li><img src="img/icons/sketch.svg" alt="Sketch"></li>
+                            <li><img src="img/icons/zeplin.svg" alt="Zeplin"></li>                           
+                            <li><img src="img/icons/gitlab.svg" alt="GitLab"></li>
+                            <li><img src="img/icons/github.svg" alt="GitHub"></li>
+                        </ul>
+                    </div>
+                </article>
+            </a>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="box-pad">
         <h2>Skills</h2>
         <ul id="skills">
-            <li><img src="img/icons/js.png" alt=""></li>
-            <li><img src="img/icons/js.png" alt=""></li>
-            <li><img src="img/icons/js.png" alt=""></li>
-            <li><img src="img/icons/js.png" alt=""></li>
-            <li><img src="img/icons/js.png" alt=""></li>
-            <li><img src="img/icons/js.png" alt=""></li>
-            <li><img src="img/icons/js.png" alt=""></li>
-            <li><img src="img/icons/js.png" alt=""></li>
+            <li><img src="img/icons/sketch.svg" alt="Sketch"></li>
+            <li><img src="img/icons/xd.svg" alt="Adobe XD"></li>
+            <li><img src="img/icons/zeplin.svg" alt="Zeplin"></li>
+            <li><img src="img/icons/css.svg" alt="CSS"></li>
+            <li><img src="img/icons/html.svg" alt="HTML"></li>
+            <li><img src="img/icons/js.svg" alt="JavaScript"></li>
+            <li><img src="img/icons/mocha.svg" alt="Mocha"></li>                        
+            <li><img src="img/icons/gitlab.svg" alt="GitLab"></li>
+            <li><img src="img/icons/github.svg" alt="GitHub"></li>
         </ul>
     </section>
 
     <!-- Contact -->
     <section id="contact">
         <div id="email" class="box-pad">
-            <h3>I'm a bit shy, but lets talk anyways.</h3>
+            <h3>If you need a guy like me, mail me.</h3>
             <a class="button" href="mailto:email@email.de">'Mail Me</a>
         </div>
         <div id="social-media" class="box-pad">
             <h3>If you're not ready yet, checkout my profiles.</h3>
-            <a class="button" href="GitHub">GitHub</a>
-            <a class="button" href="LinkedIn">LinkedIn</a>
+            <a class="button" href="https://github.com/Hermestt">GitHub</a>
+            <a class="button" href="https://linkedin.com/pmnoliveira09">LinkedIn</a>
         </div>
     </section>
 
@@ -147,9 +129,9 @@
                 <li><a href="#skills">Skills</a></li>
             </ul>
             <ul id="contacts">
-                <li><a href="mailto:email@email.de">'Mail Me</a></li>
-                <li><a href="#about-me">GitHub</li>
-                <li><a href="#about-me">LinkedIn</li>
+                <li><a href="mailto:pmnoliveira09@gmail.com">'Mail Me</a></li>
+                <li><a href="https://github.com/Hermestt">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/pedromnoliveira/">LinkedIn</a></li>
             </ul>
         </div>
     </footer>

@@ -35,6 +35,8 @@
     font-family: Montserrat, Arial, sans-serif;
 }
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; }
+
 body{
     background-color: #FBFBFB;
 }
@@ -89,6 +91,8 @@ h2{
     font-size: 40px;
     color: #1034A6;
     font-family: Montserrat, Arial, sans-serif;
+    margin-bottom: 24px;
+    margin-top: 40px;
 }
 
 .box-pad{
@@ -272,42 +276,9 @@ article{
     overflow: hidden;
 }
 
-.project-card{
-    display: inline-block;
-    background-color: #F1F1F1;
-    border-radius: 8px;
-    border: 1px solid lightgrey;
-    box-sizing: border-box;
-    margin-bottom: 32px;
-}
-
-.project-card:last-child{
-    margin-right: 0;
-}
-
-.project-card .img-container{
-    width: 100%;
-    padding-top: 56.25%;
-    background: rgb(16,52,166);
-    background: linear-gradient(336deg, rgba(16,52,166,1) 0%, rgba(0,212,255,1) 100%); ;
-}
-
-.project-details{
-    padding: 8px 16px;
-}
-
-.tech-used li{
-    display: inline;
-}
-
-.tech-used li img {
-    height: 24px;
-    width: 24px;
-}
-
 /* ===SKILLS=== */
 #skills li{
-    display: inline;
+    display: inline-block;
     margin-right: 24px;
 }
 
@@ -337,11 +308,17 @@ article{
     color: white;
     font-size: 40px;
     font-weight: 700;
+    margin-bottom: 24px;
+}
+
+#contact a{
+    margin-right: 24px;
 }
 
 /* ===FOOTER=== */
 
 footer{
+    border-top: 1px solid rgba(0,0,0,.5);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -382,7 +359,6 @@ footer li{
 
     .project-card{
         margin-right: 0;
-        width: auto;
     }
 }
 
@@ -442,7 +418,14 @@ footer li{
 
     .project-card{
         margin-right: 0;
-        width: auto;
+    }
+
+    #skills{
+        text-align: center;
+    }
+
+    #skills li{
+        margin-top: 24px;
     }
 
     #contact{
