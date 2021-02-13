@@ -1,41 +1,87 @@
-section.text-container{
-    margin-top: 56px;
+/* DOCUMENT INFORMATION
+	- Document: Portfolio Theme
+	- Author:   Pedro d'Oliveira
+*/
+
+/* CSS DIRECTORY
+	1. =Project global styles
+    2. =Project Information
+    3. =Partners
+*/
+
+/* DETAILS
+    - Media queries are assigned repeatedly as a way to keep organization 
+    and maintenance easier and component related.
+*/
+
+/* ------------------------------------------------------------------------------ */
+
+/* ===Project global styles=== */
+
+body{
+    background-color: whitesmoke;
 }
 
-.intro-list li{
+h1, h2, h3, h4, h5, h6, p, li, span{
+    color: #0a0a0a;
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+
+/* ===Project Information=== */
+
+#introduction{
+    width: 100%;
+    background-color: rgb(253, 253, 253);
+    margin-top: -56px;
+    padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 1023px) {
+    #introduction{
+        margin-top: 0;
+        padding-top: 80px;
+    }
+}
+
+/* Basic Info */
+.basic-info{
+    display: grid;
+    grid-template-columns: auto 1fr 100px;
+    column-gap: 16px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .basic-info{
+        grid-template-columns: none;
+        grid-template-rows: auto;
+        row-gap: 16px;
+    }
+}
+
+/* Specific Info */
+.specific-info{
+    margin-top: 24px;
+}
+
+.specific-info li {
     margin-top: 16px;
 }
 
-h2{
-    line-height: 4rem;
-}
 
-h3{
-    line-height: 2rem;
-    margin-top: 24px;
+/* ===Partners=== */
+#partners{
+    margin-bottom: 80px;
 }
 
 .logo-container img{
     max-width: 240px;
 }
 
-h4{
-    line-height: 1.5rem;
-}
-
-.image-block{
-    margin: 40px auto;
-    max-width: 1024px;
-    margin-bottom: 24px;
-}
-.image-block img{
-    width: 100%;
-}
-
-footer{
-    margin-top: 100px;
-}
-
-.txt-block{
-    margin: 16px 0;
+/* ===IN DEVELOPMENT ===*/
+#in-development{
+    margin-bottom: 80px;
 }

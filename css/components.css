@@ -1,87 +1,247 @@
 /* DOCUMENT INFORMATION
 	- Document: Portfolio Components
-	- Version:  0.0.1
 	- Author:   Pedro d'Oliveira
 */
 
-/* CSS DIRECTORY
-	1. =Warning Messages
-    2. =Text Containers
+/* COMPONENTS DIRECTORY
+	1. =Navigation Bar
+    2. =Dividers
+    3. =Containers
+    4. =Project Cards
+    5. =Links
+    6. =Footer
 */
 
-/* ===WARNING MESSAGES=== */
+/* DETAILS
+    - Media queries are assigned repeatedly as a way to keep organization 
+    and maintenance easier and component related.
+*/
 
-/*  bar at fixed position on top of the website */
-#warning-msg{
-    background-color: #FF2800;
-    padding: 4px 8px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    color: rbga(0,0,0,.8);
-    border-bottom: 1px solid rgba(0,0,0,.5);
+/* ------------------------------------------------------------------------------ */
+
+/* ===NAV=== 
+    Navigation bar, sticks at the top of the window and disappears on mobile.
+*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    max-width: 100%;
     box-sizing: border-box;
-    text-align: center;
 }
 
+nav li{
+    display: inline;
+    margin-right: 16px;
+}
 
-/* ===TEXT CONTAINERS=== */
+nav li:last-child{
+    margin: 0;
+}
+
+nav a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1023px) {
+    nav{
+        display: none;
+    }
+}
+
+/* ===DIVIDERS=== 
+    Components meant to be used on separating sections
+*/
+
+/* Vertical */
+.vertical-divider{
+    height: 224px;
+}
+.vertical-divider > span{
+    background-color: #F302EB;
+    width: 2px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ===CONTAINERS=== 
+    Containers responsible for limiting the width of paragraphs.
+    Mostly designed to be used at project pages.
+*/
+
+/* Text Container */
 .text-container{
     max-width: 580px;
     text-align: justify;
     margin: 0 auto;
+    padding: 24px;
 }
 
 .text-container p{
     line-height: 1.6rem;
 }
 
+/* Image Container */
+.image-block{
+    margin: 24px auto;
+    max-width: 1440px;
+    max-height: 900px;
+    text-align: center;
+}
+.image-block img{
+    max-width: 100%;
+    max-height: 900px;
+}
 
 
 /* ===PROJECT CARD=== */
-.grid-container > a{
-    display: block;
-}
 .project-card{
-    width: 100%;
-    display: inline-block;
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,.2);
+    background: linear-gradient(-45deg, rgb(0, 0, 0) 0%, #111111 100%); 
+    border-radius: 2px;
     box-sizing: border-box;
     margin-bottom: 32px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    
+    box-shadow: 0 1px 2px rgba(243, 2, 235, 0);
+    transition: all 0.75s ease-out;
+}
+
+@media only screen and (max-width: 1023px) {
+    .project-card{
+        box-shadow: 0 2px 5px rgba(243, 2, 235, 1);
+        min-height: 320px;
+    }
+}
+
+.project-card::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(243, 2, 235, 1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover::after{
+    opacity: 1;
 }
 
 .project-card:last-child{
     margin-right: 0;
 }
 
-.project-card .img-container{
-    width: auto;
-    padding-top: 56.25%;
-    background: lightskyblue;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.project-card h5{
-    line-height: 2rem;
-}
 .project-details{
-    padding: 8px 16px;
-    color:rgba(0,0,0,.9);
+    padding: 24px 24px;
 }
 
-.tech-used {
+.project-details > .name{
+    color: white;
+    transition: all 0.75s ease-out;
+}
+
+.project-details > .description {
+    color: white;
+    opacity: .62;
+    line-height: 24px;
+    transition: all 0.75s ease-out;
+}
+
+/* ===LINKS=== 
+    Links styled as buttons to be used on redirections, not to be used on submitting forms
+    where a <button> should be used.
+*/
+.btn.primary-dark{
+    padding: 12px 24px;
+    background-color: #272727;
+    border: none;
+    color: white;
+    margin: 16px 24px;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(243, 2, 235, 0);
+    transition: all 0.5s ease-out;
+}
+
+.btn.primary-dark:hover{
+    box-shadow: 0 0 1px 1px rgba(243, 2, 235, 1);
+    transition: all 0.2s ease-in;
+}
+
+
+/* ===FOOTER=== */
+footer{
+    background-color: #0a0a0a;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+footer .container{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+footer h2{
+    text-align: left;
+}
+footer h2,
+#role,
+#location,
+#message{
+    color: white;
+    opacity: .52;
+}
+
+#role,
+#location,
+#message,
+#email,
+#profile-links{
+    font-weight: 300;
+}
+
+#role{
     margin-top: 16px;
-}
-.tech-used li{
-    display: inline;
-    margin-right: 8px;
+    margin-bottom: 8px;
 }
 
-.tech-used li img {
-    height: 24px;
-    width: 24px;
+#message{
+    margin-top: 100px;
+}
+
+#profile-links{
+    margin-top: 100px;
+}
+
+#profile-links li{
+    display: inline-block;
+}
+
+/* Override of links styles because this is unique to footer */
+footer a,
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active{
+    color: white;
+}
+
+#profile-links span{
+    color: white;
+    opacity: .5;
+    margin: 0 8px;
 }
