@@ -49,7 +49,7 @@ nav a {
 }
 
 @media only screen and (max-width: 1023px) {
-    nav{
+    nav > ul > li:nth-child(-n+3){
         display: none;
     }
 }
